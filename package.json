@@ -1,6 +1,6 @@
 {
   "name": "simpleutils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "utils.js",
   "scripts": {
@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/Judahh/simpleUtils#readme",
   "dependencies": {
+    "@types/node": "8.0.24"
   },
   "devDependencies": {}
 }
