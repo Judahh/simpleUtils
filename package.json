@@ -4,6 +4,7 @@
   "description": "",
   "main": "utils.js",
   "scripts": {
+    "postinstall": "tsc",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "tsc": "tsc",
