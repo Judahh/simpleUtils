@@ -2,6 +2,7 @@ declare global {
     interface Array<T> {
       type: any;
       getType(): string;
+      pushSorted(element, compareFunction): string;
     }
     
     interface JQueryStatic {
@@ -34,6 +35,27 @@ declare global {
   Array.prototype.getType = function () {
     return this.type;
   }
+
+  Array.prototype.pushSorted = function(element, compareFunction) {
+    this.splice((function(arr) {
+      var m = 0;
+      var n = arr.length - 1;
+  
+      while(m <= n) {
+        var k = (n + m) >> 1;
+        if(compareFunction(element, arr[k])){
+          m = k + 1;
+        }else{
+          n = k - 1;
+        }
+      }
+  
+      return ((-m - 1) >= 0) ? (-m - 1) : m;
+    
+    })(this), 0, element);
+  
+    return this.length;
+  };
   
   // interface Object {
   //     getClassName(): string;
