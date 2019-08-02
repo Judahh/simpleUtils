@@ -27,6 +27,6 @@
   "homepage": "https://github.com/Judahh/simpleUtils#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "12.6.8"
+    "@types/node": "12.6.9"
   }
 }
