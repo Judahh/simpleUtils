@@ -1,7 +1,7 @@
 {
   "name": "simpleutils",
-  "version": "1.0.12",
-  "description": "",
+  "version": "1.0.13",
+  "description": "Simple Utils",
   "main": "utils.js",
   "scripts": {
     "postinstall": "tsc",
@@ -25,8 +25,12 @@
     "url": "https://github.com/Judahh/simpleUtils/issues"
   },
   "homepage": "https://github.com/Judahh/simpleUtils#readme",
-  "dependencies": {},
+  "dependencies": {
+    "node": "12.9.1",
+    "typescript": "3.6.2",
+    "tslint": "5.19.0"
+  },
   "devDependencies": {
-    "@types/node": "12.7.3"
+    "@types/node": "12.7.4"
   }
 }
