@@ -4,6 +4,7 @@ declare global {
     getType(): string;
     position(element, compareFunction): number;
     pushSorted(element, compareFunction): number;
+    pushUnique(element): boolean;
   }
 
   interface JQueryStatic {
@@ -35,6 +36,14 @@ String.prototype.replaceAll = function (search, replacement) {
 
 Array.prototype.getType = function () {
   return this.type;
+}
+
+Array.prototype.pushUnique = function (element) {
+  if (this.indexOf(element) == -1) {
+    this.push(element);
+    return true;
+  }
+  return false;
 }
 
 function checkPosition(m) {
