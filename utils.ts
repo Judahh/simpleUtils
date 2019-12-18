@@ -2,9 +2,14 @@ declare global {
   interface Array<T> {
     type: any;
     getType(): string;
-    position(element, compareFunction): number;
-    pushSorted(element, compareFunction): number;
-    pushUnique(element): boolean;
+    position(element: any, compareFunction: any): number;
+    pushSorted(element: any, compareFunction: any): number;
+    pushUnique(element: any): boolean;
+    cleanPush(element: any): number;
+  }
+
+  interface ArrayConstructor {
+    cleanPush(array: any[], element: any): any[]
   }
 
   interface JQueryStatic {
@@ -69,6 +74,13 @@ Array.prototype.pushSorted = function (element, compareFunction) {
   this.splice(index, 0, element);
   return index;
 };
+
+Array.cleanPush = function (array: any[], element: any): any[] {
+  if (!Array.isArray(array) || !array.length)
+    array = new Array<any>();
+  array.push(element);
+  return array;
+}
 
 // interface Object {
 //     getClassName(): string;

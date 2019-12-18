@@ -1,6 +1,6 @@
 {
   "name": "simpleutils",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Simple Utils",
   "main": "utils.js",
   "scripts": {
@@ -31,6 +31,6 @@
   },
   "devDependencies": {
     "typescript": "3.7.3",
-    "@types/node": "12.12.14"
+    "@types/node": "12.12.20"
   }
 }
