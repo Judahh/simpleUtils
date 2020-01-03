@@ -1,6 +1,6 @@
 {
   "name": "simpleutils",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "Simple Utils",
   "main": "utils.js",
   "scripts": {
@@ -26,11 +26,10 @@
   },
   "homepage": "https://github.com/Judahh/simpleUtils#readme",
   "dependencies": {
-    "node": "13.3.0",
     "tslint": "5.20.1"
   },
   "devDependencies": {
-    "typescript": "3.7.3",
-    "@types/node": "12.12.20"
+    "typescript": "3.7.4",
+    "@types/node": "13.1.2"
   }
 }
