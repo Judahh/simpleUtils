@@ -44,7 +44,7 @@ Array.prototype.getType = function () {
 }
 
 Array.prototype.pushUnique = function (element) {
-  if (this.indexOf(element) == -1) {
+  if (this.indexOf(element) === -1) {
     this.push(element);
     return true;
   }
@@ -81,18 +81,5 @@ Array.cleanPush = function (array: any[], element: any): any[] {
   array.push(element);
   return array;
 }
-
-// interface Object {
-//     getClassName(): string;
-//     getConstructor(): any;
-// }
-
-// Object.prototype.getConstructor = function() {
-//   return this.constructor;
-// }
-
-// Object.prototype.getClassName = function() {
-//   return this.constructor.name;
-// }
 
 export { Array, String }
