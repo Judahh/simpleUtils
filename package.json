@@ -1,6 +1,6 @@
 {
   "name": "simpleutils",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Simple Utils",
   "main": "utils.js",
   "scripts": {
