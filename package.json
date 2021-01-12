@@ -3,17 +3,29 @@
   "version": "1.0.21",
   "description": "Simple Utils",
   "main": "source/utils.js",
+  "config": {
+    "jest": "--coverage --passWithNoTests --ci --verbose --forceExit --detectOpenHandles --colors",
+    "integration_config": "-i -c integration.config.json",
+    "unit_coverall": "tests/unit/coverage/lcov.info",
+    "integration_coverall": "tests/integration/coverage/lcov.info",
+    "path_dist": "dist",
+    "path_source": "src",
+    "path_server": "src/server"
+  },
   "scripts": {
     "postinstall": "",
     "prepublish": "",
     "build": "tsc",
     "lint": "tslint \"src/**/*.ts\"",
-    "test": "jest --passWithNoTests",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "ntsc": "ntsc",
     "ntsc:w": "ntsc -w",
-    "clean": "shx rm -Rf build/"
+    "clean": "shx rm -Rf build/",
+    "test": "jest $npm_package_config_jest",
+    "integration": "jest $npm_package_config_integration_config $npm_package_config_jest",
+    "test:coveralls": "jest $npm_package_config_jest && coveralls < $npm_package_config_unit_coverall && rm -rf ./tests/unit/coverage/coverage",
+    "integration:coveralls": "jest $npm_package_config_integration_config $npm_package_config_jest && coveralls < $npm_package_config_integration_coverall && rm -rf ./tests/integration/coverage/coverage"
   },
   "repository": {
     "type": "git",
@@ -25,8 +37,7 @@
     "url": "https://github.com/Judahh/simpleUtils/issues"
   },
   "homepage": "https://github.com/Judahh/simpleUtils#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "latest",
     "@types/node": "latest",
