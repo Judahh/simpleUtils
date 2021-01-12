@@ -82,4 +82,4 @@ Array.cleanPush = function (array: any[], element: any): any[] {
   return array;
 }
 
-export { Array, String }
+export type { Array, String }

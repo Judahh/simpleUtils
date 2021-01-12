@@ -1,8 +1,8 @@
 {
   "name": "simpleutils",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "Simple Utils",
-  "main": "utils.js",
+  "main": "source/utils.js",
   "scripts": {
     "postinstall": "",
     "prepublish": "",
@@ -28,11 +28,11 @@
   "dependencies": {
   },
   "devDependencies": {
-    "@types/jest": "^24.9.0",
-    "@types/node": "13.1.7",
-    "ts-jest": "^24.3.0",
-    "tslint": "^5.20.1",
-    "typescript": "3.7.5",
-    "jest": "^24.9.0"
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "ts-jest": "latest",
+    "tslint": "latest",
+    "typescript": "latest",
+    "jest": "latest"
   }
 }
